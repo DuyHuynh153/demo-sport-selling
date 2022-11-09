@@ -19,7 +19,8 @@
     display: block;
 }
 .header__navbar-item ,
-.header__navbar-item-link{
+.header__navbar-item-link,
+.header__navbar-icon-link {
     display: inline-block;
     font-size: 1.4rem;
     color: var(--white-color);
@@ -27,11 +28,18 @@
     font-weight: 200;
 }
 .header__navbar-item:hover ,
-.header__navbar-item-link:hover{
+.header__navbar-item-link:hover
+.header__navbar-icon-link:hover,
+.header__navbar-icon:hover{
     opacity: 0.8;
     cursor: pointer;
 }
-
+.header__navbar-item span {
+    margin: 0;
+}
+.header__navbar-icon {
+    margin: 0 0 4px 2px;
+}
 
 .header__navbar-item--bold{
     font-weight: 500;
@@ -44,19 +52,15 @@
     height: 14px;
     background-color: #f86c5c;
     top:50%;
-    right:-8px;
+    right:-14px;
     transform: translateY(-50%);
 }
 
-.header__navbar-item--title-no-pointer{
-    cursor: text;
-    opacity: 1;
-    
+.no-pointer {
+    cursor:text !important;
+    color: var(--white-color) !important;
 }
-svg {
-    width: 1.3rem;
-    transform: translateY(10%);
-}
+
 
 
 /* header notify  */
@@ -125,7 +129,7 @@ svg {
    
 }
 .header__notify-item{
-
+    background-color: white;
 }
 .header__notify-item:hover{
     background-color: rgb(219, 207, 207);
@@ -171,4 +175,48 @@ svg {
     margin: auto;
     font-size: 1.4rem;
     font-weight: 400;
+}
+
+
+/* container */
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.container >div {
+    margin: auto;
+}
+
+.pagination a {
+    display: inline-flex;
+    flex-direction: row;
+    padding: 4px 4px;
+    justify-content:center;
+    font-size: 30px;
+    margin: 4px 8px;
+    text-decoration: none;
+}
+/* container__content dùng để chứa các đối tượng trong phân content */
+.container__content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+/* card */
+.card {
+    background-color: rgb(219, 138, 138);
+    position: relative;
+    float:left;
+    margin: 0 8px;
+    width: 150px;
+    height:250px;
+}
+
+h4,p {
+    margin: 4px 0 0 0;
+}
+.card__img {
+   width: 100%;
+   height: 70%;
 }
