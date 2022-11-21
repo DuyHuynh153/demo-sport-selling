@@ -1,12 +1,4 @@
 
-const PRODUCT_TYPE = {
-  SHIRT: "shirt",
-  PANTS: "pants",
-  SHOES: "shoes",
-  GLOVES: "gloves",
-};
-
-
 const product = [
   { id: 1,type:"shirt", image: "assets\\image\\ao1.jpg", title: "1: Áo" },
   { id: 2, type:"pants",image: "assets\\image\\quan1.jpg", title: "2 quần" },
@@ -49,6 +41,7 @@ let totalPages = Math.ceil(productArr.length / perPage);
 const btnnext = document.querySelector(".btn-next");
 const btnprev = document.querySelector(".btn-prev");
 
+//lấy sản phẩm dựa trên số trang
 function getCurrentPage(currentPage){
   start = (currentPage - 1) * perPage;
   end = currentPage * perPage;
@@ -103,6 +96,7 @@ function listProduct(productArr) {
   document.getElementById('container__content').innerHTML = html;
 }
 
+//khởi tạo nút số trang
 function listPage(totalPages) {
   let html = '';
   html += `<li class="current-page active"><a>${1}</a></li>`;
@@ -173,7 +167,6 @@ function initChangePage(){
     })
   }
 }
-
 listProduct(productArr);
 listPage(totalPages);
 initChangePage();

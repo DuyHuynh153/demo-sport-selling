@@ -1,6 +1,9 @@
 * {
     box-sizing: border-box;
   }
+  html{
+    scroll-behavior: smooth;
+  }
 .header {
     height: 120px;
     background-image: linear-gradient(0,#f53d2d,#ee4d2d);
