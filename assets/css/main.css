@@ -227,6 +227,7 @@ h4,p {
 .body__categories{
     margin: 70px 0 ;
 }
+
 .body__row{
     margin-top: 70px;
     margin-left: 20%;
@@ -234,19 +235,43 @@ h4,p {
     display: table;
     
 }
-.body__row div{
+.body__row .box{
     float: left;
     cursor: pointer;
     display:inline-flex ;
     width: 30%;
     padding:5px;
     margin-bottom: 50px;
-    background-color: blue;
+    
+    
 }
+.body__row .box:hover{
+    box-shadow:  0 5px 10px black;
+    background-color: red;
+}
+.overlay {
+    position: relative;
+    bottom: 0;
+    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.5); /* Black see-through */
+    color: #f1f1f1;
+    width: 100%;
+    transition: .5s ease;
+    opacity:0;
+    color: white;
+    font-size: 20px;
+    padding: 20px;
+    text-align: center;
+  }
+  .body__row .box:hover .overlay{
+    opacity: 1 ;
+  }
 .body__row div img{
+    display: block;
     width: 100%;
     height: 250px;
 }
+
 .list{
     width: 100%;
     max-width: 768px;
